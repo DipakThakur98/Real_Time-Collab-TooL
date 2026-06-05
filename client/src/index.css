@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-[#0f172a] dark:text-gray-100 antialiased;
+  }
+}
+
+/* Custom Quill Styles */
+.ql-container {
+  border: none !important;
+  font-size: 1.1rem !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+  position: sticky !important;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  padding: 1rem 2rem !important;
+}
+
+.ql-editor {
+  min-height: 800px;
+  padding: 3rem 4rem !important;
+  line-height: 1.6;
+}
+
+.ql-editor p {
+  margin-bottom: 1rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
